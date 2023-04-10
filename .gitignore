@@ -4,7 +4,7 @@
 # .tfstate files
 *.tfstate
 *.tfstate.*
-coonection.tf
+connections.tf
 
 # Crash log files
 crash.log

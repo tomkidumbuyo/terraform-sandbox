@@ -8,7 +8,7 @@ resource "aws_cloudtrail" "wassha_cloudtrail" {
 }
 
 resource "aws_s3_bucket" "wassha_cloudtrail_s3_bucket" {
-  bucket        = "wassha-cloudtrail-s3-bucket"
+  bucket = "wassha-cloudtrail-s3-bucket"
   tags = {
     Name        = "Wassha Cloudtrail S3 Buckket"
     Environment = "Dev"
@@ -48,7 +48,6 @@ data "aws_iam_policy_document" "wassha_cloudtrail_policy_data" {
     }
   }
 }
-
 
 resource "aws_s3_bucket_policy" "wassha_cloudtrail_policy" {
   bucket = aws_s3_bucket.wassha_cloudtrail_s3_bucket.id
